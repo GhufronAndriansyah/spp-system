@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
-const Kelas = require('./api/kelas/router');
+const Kelas = require('./api/admin/kelas/router');
 
 
 class Server{
