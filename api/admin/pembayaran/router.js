@@ -11,15 +11,18 @@ class Pembayaran{
     appRouter(){
         this.app.post('/admin/pembayaran', async (request,response)=>{
             const registrationResponse = {};
-            const body = request.body
+            const body = request.body;
+            const date = new Date();
+            const month = new Date().getMonth()+1;
+            const year = new Date().getFullYear();
             const data = {
             id_petugas : body.id_petugas,
             nisn : body.nisn,
-            tgl_bayar : body.tgl_bayar,
-            bulan_dibayar : body.bulan_dibayar,
-            tahun_dibayar : body.tahun_dibayar,
+            tgl_bayar : date,
+            bulan_dibayar : month,
+            tahun_dibayar : year,
             id_spp : body.id_spp,
-            jumlah_bayar : body.id_petugas,
+            jumlah_bayar : body.jumlah_bayar,
             status : body.status
             }
             // Belum sempurna
